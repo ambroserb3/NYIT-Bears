@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonScr : MonoBehaviour {
 
+	public GameObject barrier;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,5 +18,7 @@ public class ButtonScr : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		GetComponent<Animator>().SetBool("ButtonPressed",true);
+		Destroy(barrier);
 	}
+
 }
