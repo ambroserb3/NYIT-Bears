@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour {
     public Text lifeCount;
     public float time;
     public Text Timeee;
+    public Text Keys;
 
     private string niceTime;
 
@@ -43,6 +44,15 @@ public class Controller : MonoBehaviour {
 
         lifeCount.text = "Lives Remaining: " + lives;
         Timeee.text = "Time: " + niceTime;
+
+        if (keyheld == true)
+        {
+            Keys.text = "You have a key";
+        }
+        else
+        {
+            Keys.text = "No keys";
+        }
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
