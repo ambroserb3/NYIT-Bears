@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour {
 
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
       //  offset = transform.position - player.transform.position;
-        offset = new Vector3(0,0,5);
+        offset = new Vector3(0,0,10);
     }
 
     private void Update()

@@ -60,6 +60,8 @@ public class Controller : MonoBehaviour {
         {
             invincible = false; 
         }
+
+        rb2d.velocity = rb2d.velocity.normalized * 1.5F;
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -75,7 +77,7 @@ public class Controller : MonoBehaviour {
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        rb2d.AddForce(movement * 5);
+        rb2d.AddForce(movement * 10);
     }
 
 
@@ -95,4 +97,5 @@ public class Controller : MonoBehaviour {
             invinciblecountdown -= Time.deltaTime;
         }
     }
+
 }
