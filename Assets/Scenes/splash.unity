@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   record: 0
+  currTime: 0
   recordTime: 
 --- !u!114 &1557130982
 MonoBehaviour:
@@ -345,6 +346,7 @@ MonoBehaviour:
   mainmusic: {fileID: 392927324}
   controller: {fileID: 1557130980}
   goodTime: 
+  currentTime: 
 --- !u!4 &1557130983
 Transform:
   m_ObjectHideFlags: 0

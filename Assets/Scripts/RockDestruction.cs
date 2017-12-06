@@ -18,7 +18,6 @@ public class RockDestruction : MonoBehaviour {
     {
         if (c.gameObject.tag == "rock")
         {
-            Debug.Log("coll");
             Destroy(c.gameObject);
         }
     }

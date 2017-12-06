@@ -44,7 +44,7 @@ public class Controller : MonoBehaviour {
         if (lives == 0)
         {
             newtime = player.GetComponent<Controller>().time;
-            GameObject.Find("Controller").GetComponent<DataController>().SubmitNewPlayerScore(newtime);
+            GameObject.Find("Controller").GetComponent<DataController>().SubmitCurrentPlayerScore(newtime);
             PlayerPrefs.SetString("Record Time", niceTime);
             SceneManager.LoadScene("gameover");   
         }

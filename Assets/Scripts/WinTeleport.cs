@@ -24,6 +24,7 @@ public class WinTeleport : MonoBehaviour {
         {
             newtime = player.GetComponent<Controller>().time;
             GameObject.Find("Controller").GetComponent<DataController>().SubmitNewPlayerScore(newtime);
+            GameObject.Find("Controller").GetComponent<DataController>().SubmitCurrentPlayerScore(newtime);
             SceneManager.LoadScene("victory");
         }
 

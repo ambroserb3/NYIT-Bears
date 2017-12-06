@@ -11,9 +11,12 @@ public class DataController : MonoBehaviour
     public GameObject controller;
     public string goodTime;
 
+    public string currentTime;
+
     void Start()
     {
         DontDestroyOnLoad(controller);
+        playerProgress = controller.GetComponent<PlayerProgress>();
 
         LoadPlayerProgress();
         DontDestroyOnLoad(mainmusic);
@@ -26,16 +29,26 @@ public class DataController : MonoBehaviour
         int minutes = Mathf.FloorToInt(playerProgress.record / 60F);
         int seconds = Mathf.FloorToInt(playerProgress.record - minutes * 60);
         goodTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+        int min = Mathf.FloorToInt(playerProgress.currTime / 60F);
+        int sec = Mathf.FloorToInt(playerProgress.currTime - minutes * 60);
+        currentTime = string.Format("{0:0}:{1:00}", min, sec);
+
     }
 
     public void SubmitNewPlayerScore(float newRecord)
     {
         // If newScore is greater than playerProgress.highestScore, update playerProgress with the new value and call SavePlayerProgress()
-        if (newRecord > playerProgress.record)
+        if (newRecord < playerProgress.record)
         {
             playerProgress.record = newRecord;
             SavePlayerProgress();
         }
+    }
+
+    public void SubmitCurrentPlayerScore(float rrecord)
+    {
+            playerProgress.currTime = rrecord;
     }
 
     public float GetHighestPlayerScore()
@@ -46,8 +59,6 @@ public class DataController : MonoBehaviour
     // This function could be extended easily to handle any additional data we wanted to store in our PlayerProgress object
     private void LoadPlayerProgress()
     {
-        // Create a new PlayerProgress object
-        playerProgress = new PlayerProgress();
 
         // If PlayerPrefs contains a key called "highestScore", set the value of playerProgress.highestScore using the value associated with that key
         if (PlayerPrefs.HasKey("Record Time"))
@@ -61,5 +72,7 @@ public class DataController : MonoBehaviour
     {
         // Save the value playerProgress.highestScore to PlayerPrefs, with a key of "highestScore"
         PlayerPrefs.SetFloat("Record Time", playerProgress.record);
+        PlayerPrefs.SetString("Record Time", playerProgress.recordTime);
+
     }
 }

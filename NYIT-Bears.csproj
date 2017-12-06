@@ -238,7 +238,10 @@
     <Compile Include="Assets\Scripts\ButtonScr.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\creditsbutton.cs" />
+    <Compile Include="Assets\Scripts\creditsroll.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\howtobutton.cs" />
     <Compile Include="Assets\Scripts\KeyScript.cs" />
     <Compile Include="Assets\Scripts\playbutton.cs" />
     <Compile Include="Assets\Scripts\PlayerProgress.cs" />
