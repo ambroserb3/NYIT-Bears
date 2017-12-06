@@ -11,9 +11,16 @@ public class DoorScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update (){
-		if (Input.GetKeyDown(KeyCode.A)){
-			GetComponent<Animator>().SetTrigger("DoorOpen");
-			Destroy(GetComponent<BoxCollider2D>());
-		}	
+		
 	}
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player" && GameObject.Find("playerfiller").GetComponent<Controller>().keyheld)
+        {
+                GetComponent<Animator>().SetTrigger("DoorOpen");
+                Destroy(GetComponent<BoxCollider2D>());
+                GameObject.Find("playerfiller").GetComponent<Controller>().keyheld = false;
+        }
+    }
 }

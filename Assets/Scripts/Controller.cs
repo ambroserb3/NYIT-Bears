@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour {
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public GameObject key;
+    public bool keyheld;
 
     public float lives;
 
@@ -66,6 +67,7 @@ public class Controller : MonoBehaviour {
         if (c.gameObject.tag == "Key")
         {
             Destroy(key);
+            keyheld = true;
         }
 
         if (c.gameObject.tag == "rock")
