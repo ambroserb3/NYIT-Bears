@@ -234,9 +234,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Art\Door\DoorScript.cs" />
     <Compile Include="Assets\Scripts\ButtonScr.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\KeyScript.cs" />
+    <Compile Include="Assets\Scripts\LoadShit.cs" />
+    <Compile Include="Assets\Scripts\playbutton.cs" />
+    <Compile Include="Assets\Scripts\replaybutton.cs" />
+    <Compile Include="Assets\Scripts\RockDestruction.cs" />
+    <Compile Include="Assets\Scripts\rockspawner.cs" />
+    <Compile Include="Assets\Scripts\spikescript.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\Scripts\WinTeleport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

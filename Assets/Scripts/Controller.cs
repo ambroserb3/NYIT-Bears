@@ -1,16 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour {
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
+    public GameObject key;
+
+    public float lives;
+
+    public Text lifeCount;
+    public float time;
+    public Text Timeee;
+
+    private string niceTime;
 
     // Use this for initialization
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
+
+        lives = 2;
+
+       
+
+    }
+
+    void Update()
+    {
+        time += Time.deltaTime;
+        int minutes = Mathf.FloorToInt(time / 60F);
+        int seconds = Mathf.FloorToInt(time - minutes * 60);
+        niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+        if (lives == 0)
+        {
+            SceneManager.LoadScene("gameover");   
+        }
+
+        lifeCount.text = "Lives Remaining: " + lives;
+        Timeee.text = "Time: " + niceTime;
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -27,5 +58,19 @@ public class Controller : MonoBehaviour {
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movement * 5);
+    }
+
+
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        if (c.gameObject.tag == "Key")
+        {
+            Destroy(key);
+        }
+
+        if (c.gameObject.tag == "rock")
+        {
+            lives = lives - 1;
+        }
     }
 }
