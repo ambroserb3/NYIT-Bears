@@ -10,30 +10,36 @@ public class CameraFollow : MonoBehaviour {
 
     private Vector3 offset;         //Private variable to store the offset distance between the player and camera
 
+    public float timedelay;
+
     // Use this for initialization
     void Start()
     {
+        timedelay = 3;
+
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - player.transform.position;
+      //  offset = transform.position - player.transform.position;
+        offset = new Vector3(0,0,5);
     }
 
     private void Update()
     {
+        timedelay -= Time.deltaTime;
         // -------------------Code for Zooming Out------------
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (Camera.main.fieldOfView <= 125)
                 Camera.main.fieldOfView += 2;
-            if (Camera.main.orthographicSize <= 20)
+            if (Camera.main.orthographicSize <= 36)
                 Camera.main.orthographicSize += 0.5F;
 
         }
         // ---------------Code for Zooming In------------------------
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 || timedelay < 0)
         {
             if (Camera.main.fieldOfView > 2)
                 Camera.main.fieldOfView -= 2;
-            if (Camera.main.orthographicSize >= 1)
+            if (Camera.main.orthographicSize >= 5)
                 Camera.main.orthographicSize -= 0.5F;
         }
 
@@ -51,7 +57,10 @@ public class CameraFollow : MonoBehaviour {
     // LateUpdate is called after Update each frame
     void LateUpdate()
     {
-        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = player.transform.position + offset;
+        if (Camera.main.orthographicSize <= 5)
+        {
+            // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
+            transform.position = player.transform.position - offset;
+        }
     }
 }
