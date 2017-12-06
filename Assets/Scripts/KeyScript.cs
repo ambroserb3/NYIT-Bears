@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour {
 
-    public GameObject button;
     public GameObject key;
     private Vector3 offset;
     public bool first;

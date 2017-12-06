@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour {
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
-    public GameObject key;
     public bool keyheld;
 
     public float lives;
@@ -18,6 +17,9 @@ public class Controller : MonoBehaviour {
     public Text Keys;
 
     private string niceTime;
+    private bool invincible;
+    public float invinciblecountdown;
+
 
     // Use this for initialization
     void Start()
@@ -27,7 +29,7 @@ public class Controller : MonoBehaviour {
 
         lives = 2;
 
-       
+        invinciblecountdown = 1;
 
     }
 
@@ -53,6 +55,11 @@ public class Controller : MonoBehaviour {
         {
             Keys.text = "No keys";
         }
+
+        if (invinciblecountdown < 0)
+        {
+            invincible = false; 
+        }
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -76,13 +83,16 @@ public class Controller : MonoBehaviour {
     {
         if (c.gameObject.tag == "Key")
         {
-            Destroy(key);
+            Destroy(c.gameObject);
             keyheld = true;
         }
 
-        if (c.gameObject.tag == "rock")
+        if (c.gameObject.tag == "rock" && invincible == false)
         {
             lives = lives - 1;
+            invincible = true;
+            invinciblecountdown = 3;
+            invinciblecountdown -= Time.deltaTime;
         }
     }
 }
