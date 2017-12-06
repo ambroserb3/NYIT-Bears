@@ -57,7 +57,7 @@ public class CameraFollow : MonoBehaviour {
     // LateUpdate is called after Update each frame
     void LateUpdate()
     {
-        if (Camera.main.orthographicSize <= 5)
+        if (Camera.main.orthographicSize <= 5 && player != null)
         {
             // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
             transform.position = player.transform.position - offset;

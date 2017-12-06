@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class replaybutton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

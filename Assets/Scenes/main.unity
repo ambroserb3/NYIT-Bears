@@ -396,6 +396,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -724,6 +729,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -896,6 +906,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -1880,6 +1895,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2076,6 +2096,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2176,6 +2201,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2641,6 +2671,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2743,6 +2778,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2794,6 +2834,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -2952,6 +2997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1903549714}
+  newtime: 0
 --- !u!4 &1453031149 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4762689079159268, guid: 6820f29fb1c68ad48b478652fa88a135,
@@ -3122,6 +3168,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -3207,6 +3258,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -3357,6 +3413,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -3454,6 +3515,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -3500,6 +3566,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -3642,6 +3713,11 @@ Prefab:
       propertyPath: m_Name
       value: thespikes (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114963120931492738, guid: a2f7395139eb32a45993c9fc30b5a76e,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1903549714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7395139eb32a45993c9fc30b5a76e, type: 2}
   m_IsPrefabParent: 0
@@ -4236,6 +4312,9 @@ MonoBehaviour:
   time: 0
   Timeee: {fileID: 949417683}
   Keys: {fileID: 379888345}
+  newtime: 0
+  player: {fileID: 1903549714}
+  niceTime: 
   invinciblecountdown: 0
 --- !u!50 &1903549718
 Rigidbody2D:
@@ -4249,11 +4328,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 0.0055417693
-  m_LinearDrag: 0
+  m_LinearDrag: 3
   m_AngularDrag: 8000
   m_GravityScale: 0.2
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0

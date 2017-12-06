@@ -15,11 +15,13 @@ public class Controller : MonoBehaviour {
     public float time;
     public Text Timeee;
     public Text Keys;
+    public float newtime;
 
-    private string niceTime;
+    public GameObject player;
+
+    public string niceTime;
     private bool invincible;
     public float invinciblecountdown;
-
 
     // Use this for initialization
     void Start()
@@ -41,6 +43,9 @@ public class Controller : MonoBehaviour {
         niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
         if (lives == 0)
         {
+            newtime = player.GetComponent<Controller>().time;
+            GameObject.Find("Controller").GetComponent<DataController>().SubmitNewPlayerScore(newtime);
+            PlayerPrefs.SetString("Record Time", niceTime);
             SceneManager.LoadScene("gameover");   
         }
 

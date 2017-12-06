@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinTeleport : MonoBehaviour {
 
     public GameObject player;
+    public float newtime;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +22,8 @@ public class WinTeleport : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
+            newtime = player.GetComponent<Controller>().time;
+            GameObject.Find("Controller").GetComponent<DataController>().SubmitNewPlayerScore(newtime);
             SceneManager.LoadScene("victory");
         }
 

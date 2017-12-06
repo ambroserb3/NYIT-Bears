@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class spikescript : MonoBehaviour {
 
     public GameObject player;
+    public float newtime;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,8 @@ public class spikescript : MonoBehaviour {
     {
         if (c.gameObject.tag == "Player")
         {
+            newtime = player.GetComponent<Controller>().time;
+            GameObject.Find("Controller").GetComponent<DataController>().SubmitNewPlayerScore(newtime);
             Destroy(player);
             SceneManager.LoadScene("gameover");
         }
