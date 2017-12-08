@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - rock
+  - SKey
   layers:
   - Default
   - TransparentFX

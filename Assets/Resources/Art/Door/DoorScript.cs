@@ -20,7 +20,7 @@ public class DoorScript : MonoBehaviour {
         {
                 GetComponent<Animator>().SetTrigger("DoorOpen");
                 Destroy(GetComponent<BoxCollider2D>());
-                GameObject.Find("playerfiller").GetComponent<Controller>().keyheld = false;
+                GameObject.Find("playerfiller").GetComponent<Controller>().specialkeyheld = false;
         }
     }
 }

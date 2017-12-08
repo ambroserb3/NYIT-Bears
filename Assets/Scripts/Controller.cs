@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour {
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
+    public bool specialkeyheld;
     public bool keyheld;
 
     public float lives;
@@ -52,7 +53,7 @@ public class Controller : MonoBehaviour {
         lifeCount.text = "Lives Remaining: " + lives;
         Timeee.text = "Time: " + niceTime;
 
-        if (keyheld == true)
+        if (specialkeyheld == true)
         {
             Keys.text = "You have a key";
         }
@@ -92,6 +93,12 @@ public class Controller : MonoBehaviour {
         {
             Destroy(c.gameObject);
             keyheld = true;
+        }
+
+        if (c.gameObject.tag == "SKey")
+        {
+            Destroy(c.gameObject);
+            specialkeyheld = true;
         }
 
         if (c.gameObject.tag == "rock" && invincible == false)
