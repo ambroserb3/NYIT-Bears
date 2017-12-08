@@ -13,7 +13,7 @@ public class PlayerProgress : MonoBehaviour {
     void Start () {
         
         //Give the PlayerPrefs some values to send over
-       PlayerPrefs.SetFloat("Record Time", 90);
+       PlayerPrefs.SetFloat("Record Time", 120);
        PlayerPrefs.SetString("Record String", "");
     }
 
@@ -26,7 +26,7 @@ public class PlayerProgress : MonoBehaviour {
     {
         if (record == 0)
         {
-           record = 90;
+           record = 120;
         }
         //PlayerPrefs.SetFloat("Record Time", record);
     }
