@@ -8,16 +8,14 @@ public class TimerDoor : MonoBehaviour {
     public float countdown;
     public Text TimeRemaining;
     public GameObject specialkey;
-    public GameObject playerone;
-    public GameObject teleportation;
+
+    public string niceCount;
 
     public GameObject rockspawnlocation;
-
-    //public bool keymade;
     
     // Use this for initialization
     void Start () {
-        countdown = 12;
+        countdown = 14;
 	}
 
     // Update is called once per frame
@@ -30,21 +28,20 @@ public class TimerDoor : MonoBehaviour {
         {
             GameObject.Find("playerfiller").GetComponent<Controller>().specialkeyheld = false;
             Instantiate(specialkey, rockspawnlocation.transform.localPosition, rockspawnlocation.transform.localRotation);
-            countdown = 15;
-            //keymade = false;
-
+            countdown = 14;
+        }
+        int minutes = Mathf.FloorToInt(countdown / 60F);
+        int seconds = Mathf.FloorToInt(countdown - minutes * 60);
+        niceCount = string.Format("{0:0}:{1:00}", minutes, seconds);
+        if (countdown < 14)
+        {
+            TimeRemaining.text = "Remaining Time: " + niceCount;
         }
 
-        if (countdown < 20)
+        if (GameObject.Find("playerfiller").GetComponent<Controller>().specialkeyheld == false)
         {
-            TimeRemaining.text = "Remaining Time: " + countdown;
-        }
-        if (playerone.transform.position == teleportation.transform.position)
-        {
-         
             TimeRemaining.text = "";
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D coll)

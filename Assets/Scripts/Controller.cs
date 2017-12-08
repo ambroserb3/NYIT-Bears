@@ -24,6 +24,7 @@ public class Controller : MonoBehaviour {
     private bool invincible;
     public float invinciblecountdown;
 
+    public int lockPos = 0;
     // Use this for initialization
     void Start()
     {
@@ -33,6 +34,8 @@ public class Controller : MonoBehaviour {
         lives = 2;
 
         invinciblecountdown = 1;
+
+        time = 0;
 
     }
 
@@ -67,7 +70,11 @@ public class Controller : MonoBehaviour {
             invincible = false; 
         }
 
-        rb2d.velocity = rb2d.velocity.normalized * 1.5F;
+        if (time > 6.5F)
+        {
+            //rb2d.velocity = rb2d.velocity.normalized * 3F;
+        }
+        player.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lockPos, lockPos);
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -83,7 +90,10 @@ public class Controller : MonoBehaviour {
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        rb2d.AddForce(movement * 10);
+        if (time > 6.5F)
+        {
+            rb2d.AddForce(movement * 2);
+        }
     }
 
 

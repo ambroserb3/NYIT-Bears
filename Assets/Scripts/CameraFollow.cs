@@ -11,11 +11,12 @@ public class CameraFollow : MonoBehaviour {
     private Vector3 offset;         //Private variable to store the offset distance between the player and camera
 
     public float timedelay;
+    bool done;
 
     // Use this for initialization
     void Start()
     {
-        timedelay = 3;
+        timedelay = 2.8F;
 
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
       //  offset = transform.position - player.transform.position;
@@ -43,7 +44,18 @@ public class CameraFollow : MonoBehaviour {
                 Camera.main.orthographicSize -= 0.5F;
         }
 
+
         // -------Code to switch camera between Perspective and Orthographic--------
+        if (timedelay < -1.3F && done == false)
+        {
+                Camera.main.orthographic = false;
+        }
+        if (timedelay < -3.3F)
+        {
+            Camera.main.orthographic = true;
+            done = true;
+        }
+
         if (Input.GetKeyUp(KeyCode.B))
         {
             if (Camera.main.orthographic == true)
