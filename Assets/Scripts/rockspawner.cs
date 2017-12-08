@@ -12,7 +12,7 @@ public class rockspawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        timer = 1.5F;
+        timer = 1.2F;
 	}
 	
 	// Update is called once per frame

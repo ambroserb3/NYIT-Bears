@@ -37,16 +37,21 @@ public class Controller : MonoBehaviour {
 
         time = 0;
 
+        DontDestroyOnLoad(player);
     }
 
     void Update()
     {
-        time += Time.deltaTime;
+        if (GameObject.Find("Teleporter T").GetComponent<WinTeleport>().winTrigger == false)
+        { 
+            time += Time.deltaTime;
+        }
         int minutes = Mathf.FloorToInt(time / 60F);
         int seconds = Mathf.FloorToInt(time - minutes * 60);
         niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
         if (lives == 0)
         {
+            GameObject.Find("Teleporter T").GetComponent<WinTeleport>().victorytime = GameObject.Find("playerfiller").GetComponent<Controller>().niceTime;
             newtime = player.GetComponent<Controller>().time;
             GameObject.Find("Controller").GetComponent<DataController>().SubmitCurrentPlayerScore(newtime);
             PlayerPrefs.SetString("Record Time", niceTime);
@@ -90,7 +95,7 @@ public class Controller : MonoBehaviour {
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        if (time > 6.5F)
+        if (time > 3)
         {
             rb2d.AddForce(movement * 2);
         }

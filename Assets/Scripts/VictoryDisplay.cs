@@ -10,7 +10,6 @@ public class VictoryDisplay : MonoBehaviour {
 
     private PlayerProgress playerProgress;
 
-
     // Use this for initialization
     void Start () {
 		
@@ -22,7 +21,7 @@ public class VictoryDisplay : MonoBehaviour {
 
         recordDisplay.text = "Record Time: " + GameObject.Find("Controller").GetComponent<DataController>().goodTime;
         
-        yourtime.text = "Your Time was: " + GameObject.Find("Controller").GetComponent<DataController>().currentTime;
+        yourtime.text = "Your Time was: " + GameObject.Find("Teleporter T").GetComponent<WinTeleport>().victorytime;
 
     }
 }

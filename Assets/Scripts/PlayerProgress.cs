@@ -13,8 +13,8 @@ public class PlayerProgress : MonoBehaviour {
     void Start () {
         
         //Give the PlayerPrefs some values to send over
-       PlayerPrefs.SetFloat("Record Time", 50);
-       PlayerPrefs.SetString("Record Time", "Time");
+       PlayerPrefs.SetFloat("Record Time", 90);
+       PlayerPrefs.SetString("Record String", "");
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class PlayerProgress : MonoBehaviour {
     {
         if (record == 0)
         {
-            record = 55;
+           record = 90;
         }
         //PlayerPrefs.SetFloat("Record Time", record);
     }

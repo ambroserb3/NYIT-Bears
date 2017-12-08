@@ -45,7 +45,7 @@ public class CameraFollow : MonoBehaviour {
         }
 
 
-        // -------Code to switch camera between Perspective and Orthographic--------
+        /* -------Code to switch camera between Perspective and Orthographic--------
         if (timedelay < -1.3F && done == false)
         {
                 Camera.main.orthographic = false;
@@ -54,7 +54,7 @@ public class CameraFollow : MonoBehaviour {
         {
             Camera.main.orthographic = true;
             done = true;
-        }
+        }*/
 
         if (Input.GetKeyUp(KeyCode.B))
         {
@@ -74,5 +74,10 @@ public class CameraFollow : MonoBehaviour {
             // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
             transform.position = player.transform.position - offset;
         }
+    }
+
+    public void CameraSwitch()
+    {
+        Camera.main.orthographic = false;
     }
 }

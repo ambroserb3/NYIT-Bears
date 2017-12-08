@@ -12,8 +12,10 @@ public class playbutton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        Destroy(GameObject.Find("playerfiller"));
+        Destroy(GameObject.Find("Teleporter T"));
+
+    }
 
     private void OnMouseDown()
     {

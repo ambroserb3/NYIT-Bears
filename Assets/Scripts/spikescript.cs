@@ -21,6 +21,7 @@ public class spikescript : MonoBehaviour {
     {
         if (c.gameObject.tag == "Player")
         {
+            GameObject.Find("Teleporter T").GetComponent<WinTeleport>().victorytime = GameObject.Find("playerfiller").GetComponent<Controller>().niceTime;
             newtime = GameObject.Find("playerfiller").GetComponent<Controller>().time;
             GameObject.Find("Controller").GetComponent<DataController>().SubmitCurrentPlayerScore(newtime);
             Destroy(c.gameObject);
